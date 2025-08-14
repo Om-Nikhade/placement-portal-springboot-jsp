@@ -42,8 +42,13 @@
             </div>
         </form>
         <div class="text-center">
-            <p>Don't have an account?</p>
-            <a href="/register" class="btn btn-outline-secondary">Register</a>
+            <p>Don't have an account?
+            Registers As User</p>
+            <a href="/userregister" class="btn btn-outline-secondary">User</a>
+        </div>
+        <div class="text-center">
+            <p>Register As Admin</p>
+            <a href="/registerAdmin" class="btn btn-outline-secondary">Admin</a>
         </div>
     </div>
 </body>

@@ -4,16 +4,28 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
+import java.util.Date;
 
 @Entity
 public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int id;
-	String email;
-	String password;
-	
+	private int id;
+	private String name;
+    @Email
+    @NotBlank(message="Email")
+    private String email;
+    private int phone;
+    private String degree;
+    private String college;
+    private Date year;
+	private String password;
+    private String Cpassword;
+
 	public User() {}
 	
 	public User(int id, String email, String password) {
