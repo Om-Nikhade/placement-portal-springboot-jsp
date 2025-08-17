@@ -1,4 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,16 +41,22 @@
             <div class="d-grid mb-3">
                 <input type="submit" value="Loginn" class="btn btn-primary">
             </div>
+
         </form>
+        <c:if test="${not empty errorMessage}">
+            <p style="color:red;">${errorMessage}</p>
+        </c:if>
+
         <div class="text-center">
             <p>Don't have an account?
             Registers As User</p>
-            <a href="/userregister" class="btn btn-outline-secondary">User</a>
+            <a href="${pageContext.request.contextPath}/registerUser" class="btn btn-outline-secondary">User</a>
         </div>
         <div class="text-center">
             <p>Register As Admin</p>
             <a href="/registerAdmin" class="btn btn-outline-secondary">Admin</a>
         </div>
     </div>
+
 </body>
 </html>

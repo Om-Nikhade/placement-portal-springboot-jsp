@@ -1,12 +1,10 @@
 package com.placementportal.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -17,12 +15,13 @@ public class User {
 	private int id;
 	private String name;
     @Email
-    @NotBlank(message="Email")
+    @NotBlank(message="Email should be not empty")
     private String email;
-    private int phone;
+    @NotBlank(message = "Phone should not be empty")
+    private String phone;
     private String degree;
     private String college;
-    private Date year;
+    private LocalDate year;
 	private String password;
     private String Cpassword;
 
@@ -34,21 +33,76 @@ public class User {
 		this.password = password;
 	}
 
+    public int getId() {
+        return id;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getDegree() {
+        return degree;
+    }
+
+    public void setDegree(String degree) {
+        this.degree = degree;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getCollege() {
+        return college;
+    }
+
+    public void setCollege(String college) {
+        this.college = college;
+    }
+
+    public LocalDate getYear() {
+        return year;
+    }
+
+    public void setYear(LocalDate year) {
+        this.year = year;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getCpassword() {
+        return Cpassword;
+    }
+
+    public void setCpassword(String cpassword) {
+        Cpassword = cpassword;
+    }
+
 }
