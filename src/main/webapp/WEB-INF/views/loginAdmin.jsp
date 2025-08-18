@@ -23,7 +23,7 @@
 <body>
 <div class="container col-md-4 offset-md-4 login-container">
     <h3 class="text-center mb-4">Admin Login</h3>
-    <form action="/loginAdmin" method="post">
+    <form action="/admin/login" method="post">
         <div class="mb-3">
             <label for="email" class="form-label">Email ID</label>
             <input type="email" name="email" id="email" class="form-control" required placeholder="Enter your email">
@@ -38,7 +38,7 @@
         <div class="text-center">
             <a href=forgot-password">Forgot Password?</a>
             <br>
-            <p class="mt-2">New Admin? <a href="registerAdmin">Register here</a></p>
+            <p class="mt-2">New Admin? <a href="/admin">Register here</a></p>
         </div>
     </form>
 </div>

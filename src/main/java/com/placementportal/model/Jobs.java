@@ -11,32 +11,43 @@ import java.util.List;
 public class Jobs {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long jobid;
+    private int jobid;
     private String title;
     private String description;
     private String location;
+    private String company;
     private String startdate;
     private double salary;
+
     private String lastdate;
 
     public Jobs() {
     }
 
-    public Jobs(String title, String description, String location, String startdate, double salary, String lastdate) {
+    public Jobs(String company, String title, String description, String location, String startdate, double salary, String lastdate) {
         this.title = title;
         this.description = description;
         this.location = location;
+        this.company = company;
         this.startdate = startdate;
         this.salary = salary;
         this.lastdate = lastdate;
 
     }
 
-    public Long getJobid() {
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public int getJobid() {
         return jobid;
     }
 
-    public void setJobid(Long jobid) {
+    public void setJobid(int jobid) {
         this.jobid = jobid;
     }
 
