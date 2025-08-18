@@ -73,4 +73,14 @@ public class AdminController {
         return "redirect:/admin/dashboard";
     }
 
+    @GetMapping("admin/deleteJob/{jobid}")
+    public String deleteJob(@PathVariable int jobid) {
+        adminService.deleteJobById(jobid);
+        return "redirect:/admin/dashboard";
+
+    }
+
+
+
+
 }

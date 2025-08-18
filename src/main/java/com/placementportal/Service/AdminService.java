@@ -10,8 +10,6 @@ import org.springframework.stereotype.Service;
 
 import com.placementportal.Repository.AdminRepo;
 import com.placementportal.model.Admin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 
 @Service
 public class AdminService {
@@ -69,8 +67,17 @@ public class AdminService {
         }).orElse(null);
     }
 
+
     public Jobs getJobById(int jobid) {
         return jobRepo.findById(jobid).orElse(null);
+    }
+
+    public Jobs getById(int jobid) {
+        return jobRepo.findById(jobid).orElse(null);
+    }
+
+    public void deleteJobById(int jobid) {
+        jobRepo.deleteById(jobid);
     }
 }
 
