@@ -80,6 +80,5 @@ public class AdminService {
         jobRepo.deleteById(jobid);
     }
 }
-
-
+  
 

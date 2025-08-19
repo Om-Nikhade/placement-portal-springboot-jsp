@@ -25,7 +25,7 @@
                 <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Applicants</a></li>
-                <li class="nav-item"><a class="nav-link text-warning fw-bold" href="/logout">Logout</a></li>
+                <li class="nav-item"><a class="nav-link text-warning fw-bold" href="logout">Logout</a></li>
             </ul>
         </div>
     </div>

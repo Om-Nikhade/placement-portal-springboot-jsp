@@ -12,6 +12,16 @@
             font-family: 'Segoe UI', sans-serif;
         }
 
+        .navbar {
+            background: #003366;
+        }
+        .navbar .navbar-brand, .navbar .nav-link {
+            color: white !important;
+        }
+        .navbar .btn-login {
+            margin-left: 10px;
+        }
+
         .hero-section {
             background: linear-gradient(to right, #0066ff, #003399);
             color: white;
@@ -59,6 +69,18 @@
 </head>
 <body>
 
+<!-- Navbar with Login Buttons -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="/">Placement Portal</a>
+        <div class="ml-auto">
+            <a href="/user/login" class="btn btn-light btn-sm btn-login">User Login</a>
+            <a href="/admin/login" class="btn btn-warning btn-sm btn-login">Admin Login</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
 <div class="hero-section">
     <h1>Find your dream job</h1>
     <p>Search from thousands of job opportunities across industries</p>
@@ -69,9 +91,10 @@
     </form>
 </div>
 
+<!-- Job Listings -->
 <div class="container mt-4">
     <h3 class="mb-4">Featured Jobs</h3>
-    
+
     <!-- Example Job Card -->
     <div class="job-card">
         <h5>Java Developer</h5>
@@ -92,6 +115,7 @@
     </div>
 </div>
 
+<!-- Footer -->
 <footer>
     &copy; 2025 Placement Portal Om Nikhade. All rights reserved.
 </footer>

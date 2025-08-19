@@ -52,6 +52,10 @@ public class AdminController {
     @GetMapping("/admin/dashboard")
     public String adminDashboard(Model model) {
         model.addAttribute("jobs",adminService.getAlljobs());
+        model.addAttribute("totalJobs",10);
+        model.addAttribute("totalApplicants",18);
+        model.addAttribute("activeJobs",5);
+        model.addAttribute("totalCompanies",15);
         return "admin-dashboard";
     }
 
@@ -77,10 +81,10 @@ public class AdminController {
     public String deleteJob(@PathVariable int jobid) {
         adminService.deleteJobById(jobid);
         return "redirect:/admin/dashboard";
-
     }
 
-
-
-
-}
+        @GetMapping("/admin/logout")
+        public String logout(){
+        return "redirect:/";
+        }
+    }
