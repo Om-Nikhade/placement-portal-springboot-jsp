@@ -16,13 +16,13 @@ public class UserController {
     @Autowired
      public UserService service;
 
-    @GetMapping("/registerUser")
+    @GetMapping("/user")
     public String Showregister() {
 
     	return "UserRegister";
     }
 
-    @PostMapping("/registerUser")
+    @PostMapping("/user")
     @ResponseBody
     public String register(@ModelAttribute User user, Model model) {
     	String result= service.doregister(user);
@@ -48,14 +48,15 @@ public class UserController {
 
         boolean isValid = service.dologin(email, password);
         if (isValid) {
-            return "redirect:/dashboard";
+            return "redirect:user/dashboard";
         } else {
             redirectAttributes.addFlashAttribute("errorMessage","Login Unsucessful Try again");
             return "Userlogin";
         }
     }
-    @GetMapping("/dashboard")
-    public String ShowDashBorad() {
+    @GetMapping("/user/dashboard")
+    public String ShowDashBorad(Model model) {
+
     	return "user-dashboard";
 
     }

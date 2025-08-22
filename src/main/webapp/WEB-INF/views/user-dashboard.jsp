@@ -84,7 +84,7 @@
         <div class="card">
             <h3>Available Jobs</h3>
             <p>Browse and apply to the latest job opportunities posted by recruiters.</p>
-            <a href="/jobs">View Jobs</a>
+            <a href="/">View Jobs</a>
         </div>
 
         <div class="card">

@@ -74,7 +74,7 @@
     <div class="container">
         <a class="navbar-brand" href="/">Placement Portal</a>
         <div class="ml-auto">
-            <a href="/user/login" class="btn btn-light btn-sm btn-login">User Login</a>
+            <a href="loginn" class="btn btn-light btn-sm btn-login">User Login</a>
             <a href="/admin/login" class="btn btn-warning btn-sm btn-login">Admin Login</a>
         </div>
     </div>
@@ -90,28 +90,18 @@
         <button type="submit" class="btn btn-search">Search Jobs</button>
     </form>
 </div>
-
-<!-- Job Listings -->
-<div class="container mt-4">
-    <h3 class="mb-4">Featured Jobs</h3>
-
     <!-- Example Job Card -->
-    <div class="job-card">
-        <h5>Java Developer</h5>
-        <p><strong>Company:</strong> TCS Pvt Ltd</p>
-        <p><strong>Location:</strong> Pune</p>
-        <p><strong>Experience:</strong> 0-2 years</p>
-        <p><strong>Skills:</strong> Core Java, Spring Boot, MySQL</p>
-        <a href="/loginn" class="btn btn-primary">Apply Now</a>
-    </div>
+    <div class="container mt-4">
+        <h3 class="mb-4">Featured Jobs</h3>
 
-    <div class="job-card">
-        <h5>Front-End Developer</h5>
-        <p><strong>Company:</strong> Infosys</p>
-        <p><strong>Location:</strong> Bangalore</p>
-        <p><strong>Experience:</strong> 1-3 years</p>
-        <p><strong>Skills:</strong> HTML, CSS, React.js</p>
-        <a href="/loginn" class="btn btn-primary">Apply Now</a>
+        <c:forEach var="job" items="${job}">
+            <div class="job-card">
+                <h5>${job.title}</h5>
+                <p><strong>Company:</strong> ${job.company}</p>
+                <p><strong>Location:</strong> ${job.location}</p>
+                <a href="/loginn" class="btn btn-primary">Apply Now</a>
+            </div>
+        </c:forEach>
     </div>
 </div>
 

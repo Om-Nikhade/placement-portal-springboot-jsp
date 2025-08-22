@@ -49,12 +49,8 @@
 
         <div class="text-center">
             <p>Don't have an account?
-            Registers As User</p>
-            <a href="${pageContext.request.contextPath}/registerUser" class="btn btn-outline-secondary">User</a>
-        </div>
-        <div class="text-center">
-            <p>Register As Admin</p>
-            <a href="/registerAdmin" class="btn btn-outline-secondary">Admin</a>
+            Registers here</p>
+            <a href="${pageContext.request.contextPath}/user" class="btn btn-outline-secondary">User</a>
         </div>
     </div>
 

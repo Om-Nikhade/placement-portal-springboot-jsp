@@ -48,7 +48,7 @@
 <div class="register-container">
     <h2>User Registration</h2>
 
-    <form action="<c:url value='/registerUser'/>" method="post">
+    <form action="<c:url value='/user'/>" method="post">
         <label class="form-label">Name</label>
         <input type="text" name="name" class="form-control" required />
 
